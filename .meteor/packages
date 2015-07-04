@@ -12,3 +12,5 @@ mdg:reload-on-resume
 dburles:google-maps
 meteorhacks:npm
 msavin:mongol
+ground:db
+mizzao:openlayers
