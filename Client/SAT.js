@@ -8,28 +8,34 @@
     Template.map.onCreated(function() {
       GoogleMaps.ready('map', function(map) {
         google.maps.event.addListener(map.instance, 'click', function(event) {
+          var infowin;
+
           if (Meteor.isCordova) {
 
           } else {
-
+            alert("hello");
+            FiresDB.insert({
+              lat: event.latLng.lat(),
+              lng: event.latLng.lng()
+            });
+            infowin = new google.maps.InfoWindow({
+              content: "BLA"
+            });
+            infowin.open(map, marker);
           }
-          FiresDB.insert({
-            lat: event.latLng.lat(),
-            lng: event.latLng.lng()
-          });
-          new google.maps.InfoWindow({
-            content: "BLA"
-          }).open(map, marker);
         });
         FiresDB.find().observe({
           added: function(document) {
-            var marker;
+            var iconBase, marker;
 
+            iconBase = 'https://maps.google.com/mapfiles/kml/shapes/';
             marker = new google.maps.Marker({
               draggable: !Meteor.isCordova,
               animation: google.maps.Animation.DROP,
               position: new google.maps.LatLng(document.lat, document.lng),
               map: map.instance,
+              icon: "fire-icon_small.png",
+              title: "Hello World",
               id: document._id
             });
             google.maps.event.addListener(marker, 'dragend', function(event) {

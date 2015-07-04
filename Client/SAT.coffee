@@ -2,23 +2,29 @@ FiresDB = new (Mongo.Collection)('Fires')
 if Meteor.isClient
   Template.map.onCreated ->
     GoogleMaps.ready 'map', (map) ->
+      #GeoMarker = new GeolocationMarker(map)
       google.maps.event.addListener map.instance, 'click', (event) ->
         if Meteor.isCordova
         else
-        FiresDB.insert
-          lat: event.latLng.lat()
-          lng: event.latLng.lng()
-        new google.maps.InfoWindow({
-          content: "BLA"
-        }).open(map,marker)
+          alert("hello")
+          FiresDB.insert
+            lat: event.latLng.lat()
+            lng: event.latLng.lng()
+          infowin = new google.maps.InfoWindow({
+            content: "BLA"
+          })
+          infowin.open(map,marker)
         return
       FiresDB.find().observe
         added: (document) ->
+          iconBase = 'https://maps.google.com/mapfiles/kml/shapes/'
           marker = new (google.maps.Marker)(
             draggable: not Meteor.isCordova
             animation: google.maps.Animation.DROP
             position: new (google.maps.LatLng)(document.lat, document.lng)
             map: map.instance
+            icon:"fire-icon_small.png"
+            title: "Hello World"
             id: document._id)
           google.maps.event.addListener marker, 'dragend', (event) ->
             FiresDB.update marker.id, $set:
