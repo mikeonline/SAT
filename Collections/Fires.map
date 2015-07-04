@@ -1,0 +1,10 @@
+{
+  "version": 3,
+  "file": "Fires.js",
+  "sourceRoot": "",
+  "sources": [
+    "Fires.coffee"
+  ],
+  "names": [],
+  "mappings": ";AAAA;CAAA,KAAA,CAAA;;CAAA,CAAA,CAAc,CAAC,CAAK,EAApB,GAAc;;CAAd,CAEA,IAAA,CAAO;CAFP"
+}
