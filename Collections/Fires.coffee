@@ -1,7 +1,7 @@
 FiresDB = new (Mongo.Collection)('Fires')
 
 FiresDB.insert({
-    "title": "20.425S 122.949E",
+    "title": "-33.870S, 117.111E",
     "category": "modis",
     "guid": {
       "isPermaLink": "false",
@@ -9,12 +9,13 @@ FiresDB.insert({
     },
     "pubDate": "Tue, 06 May 2014 05:30:30 GMT",
     "description": "
-          LOCATION: -20.425 122.949<br/>TEMPERATURE: 57.8C<br/>CONFIDENCE: 76%<br/>SATELLITE: aqua<br/>OBS TIME: 2014-05-06T05:30:30Z<br/>GRID: 1km
+          LOCATION: -33.870460, 117.110885<br/>TEMPERATURE: 57.8C<br/>CONFIDENCE: 76%<br/>SATELLITE: aqua<br/>OBS TIME: 2014-05-06T05:30:30Z<br/>GRID: 1km
           ",
-    "georss:point": "-20.425 122.949"
+    "georss:point": "-33.870460, 117.110885"
 })
+
 FiresDB.insert({
-    "title": "20.423S 122.959E",
+    "title": "-33.925S, 117.022E",
     "category": "modis",
     "guid": {
       "isPermaLink": "false",
@@ -22,7 +23,7 @@ FiresDB.insert({
     },
     "pubDate": "Tue, 06 May 2014 05:30:30 GMT",
     "description": "
-          LOCATION: -20.423 122.959<br/>TEMPERATURE: 54.5C<br/>CONFIDENCE: 54%<br/>SATELLITE: aqua<br/>OBS TIME: 2014-05-06T05:30:30Z<br/>GRID: 1km
+          LOCATION: -33.925459, 117.022308<br/>TEMPERATURE: 54.5C<br/>CONFIDENCE: 54%<br/>SATELLITE: aqua<br/>OBS TIME: 2014-05-06T05:30:30Z<br/>GRID: 1km
           ",
-    "georss:point": "-20.423 122.959"
+    "georss:point": "-33.925459, 117.022308"
 })
