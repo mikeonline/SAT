@@ -9,8 +9,8 @@
       </sourceFilesUrls>
     </properties>
     <CLASSES>
-      <root url="file://$PROJECT_DIR$/Collections/Fires.js" />
-      <root url="file://$PROJECT_DIR$/Collections/Markers.js" />
+      <root url="file://$PROJECT_DIR$/Collection/Fires.js" />
+      <root url="file://$PROJECT_DIR$/Collection/Markers.js" />
       <root url="file://$PROJECT_DIR$/Client/SAT.js" />
       <root url="file://$PROJECT_DIR$/mobile-config.js" />
     </CLASSES>
